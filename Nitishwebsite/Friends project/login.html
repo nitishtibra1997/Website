@@ -1,0 +1,71 @@
+<doctype html>
+<html>
+<head>
+<script type="text/javascript"> 
+function validate() 
+{ 
+  if( document.myForm.name.value == "" ) 
+  { 
+    alert( "Please provide your FullName!" ); 
+    document.myForm.username.focus() ; 
+    return false; 
+  } 
+  if( document.myForm.email.value == "" ) 
+  { 
+    alert( "Please provide your Email!" ); 
+    document.myForm.email.focus() ; 
+    return false; 
+  }  
+    if( document.myForm.number.value == "" ) 
+  { 
+    alert( "Please provide your phone number !" ); 
+    document.myForm.number.focus() ; 
+    return false; 
+  }
+  if( (document.myForm.number.value).length<10 ) 
+  { 
+    alert( "Enter Your Mobile Number Of 10 Characters."); 
+    document.myForm.number.focus() ; 
+    return false; 
+  }
+  if( document.myForm.messages.value == "" ) 
+  { 
+    alert( "Write some feedback or  your reason to contact us!" ); 
+    document.myForm.messages.focus() ; 
+    return false; 
+  }
+    alert("Your Message Has Been Received By Customer Care Operators. Thank You!!!");
+    return true ; 
+}
+</script>
+<meta charset="utf-8">
+  <title>IT project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head> <form action name="myForm" onSubmit="return(validate());"> 
+<table cellspacing="1" cellpadding="1" border="1"> 
+<tr>
+<td align="center" style="background:lightgrey;">Name</td> 
+<td><input type="text" name="name" /></td> 
+</tr>
+<tr> 
+<td align="center"style="background:lightgrey;">EMail</td> 
+<td><input type="email" name="email" /></td> 
+</tr>
+<tr> 
+<td align="center"style="background:lightgrey;">Phone number</td> 
+<td><input type="text" name="number" /></td> 
+</tr> 
+<tr> 
+<td align="center"style="background:lightgrey;">Messages</td> 
+<td><input type="text" name="messages"/></td> 
+</tr>
+<tr >
+<td colspan="2" padding-left=2px>
+<input type="submit" name="submit" Value="submit" >
+</td>
+</tr>
+</table>
+</form>
+<div class="clearfix">
+     </div>
